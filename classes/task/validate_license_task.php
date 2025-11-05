@@ -7,17 +7,29 @@ use core\task\scheduled_task;
 use local_ai_forum_assistant\license_client;
 
 class validate_license_task extends scheduled_task {
+
+    /**
+     * Nombre visible en la página de tareas programadas.
+     */
     public function get_name() {
         return get_string('task_validatelicense', 'local_ai_forum_assistant');
     }
 
+    /**
+     * Ejecuta la validación de licencia contra el servidor remoto.
+     */
     public function execute() {
-        $res = license_client::validate();
-        if (empty($res['ok'])) {
-            mtrace('[AI Forum Assistant] License validation failed: ' . (isset($res['error']) ? $res['error'] : 'unknown'));
+        mtrace('[AI Forum Assistant] Iniciando validación de licencia...');
+
+        $result = license_client::validate();
+
+        if (empty($result['ok'])) {
+            mtrace('[AI Forum Assistant] ❌ Validación fallida: ' . ($result['error'] ?? 'error desconocido'));
         } else {
-            mtrace('[AI Forum Assistant] License validation ok. valid=' . (!empty($res['valid']) ? '1' : '0'));
+            $status = !empty($result['valid']) ? 'válida ✅' : 'inválida ❌';
+            mtrace('[AI Forum Assistant] Resultado de validación: ' . $status);
         }
+
         return true;
     }
 }
