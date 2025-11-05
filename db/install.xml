@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/ai_forum_assistant/db" VERSION="2025102801" COMMENT="Install XML for AI Forum Assistant plugin">
+    <TABLES>
+        <TABLE NAME="local_ai_forum_assistant_coursecfg" COMMENT="Course-level configuration for AI Forum Assistant">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="Course ID"/>
+                <FIELD NAME="enabled" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" COMMENT="Enable AI Assistant for this course (1=yes, 0=no)"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+                <KEY NAME="unique_course" TYPE="unique" FIELDS="courseid"/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>
