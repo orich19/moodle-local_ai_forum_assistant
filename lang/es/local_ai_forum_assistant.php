@@ -43,7 +43,7 @@ $string['licensekey_desc'] = 'Pega aquí la clave de licencia que recibiste al c
 $string['licsecret'] = 'API Secret (opcional, MVP)';
 $string['licsecret_desc'] = 'Secreto de la API del servidor WordPress. Para el MVP; en producción migra a tokens por licencia.';
 
-$string['task_validatelicense'] = 'Validar licencia del asistente IA (diario)';
+$string['task_validatelicense'] = 'Validar licencia del asistente IA (diariamente)';
 
 
 
