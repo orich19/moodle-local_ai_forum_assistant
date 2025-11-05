@@ -3,6 +3,8 @@ namespace local_ai_forum_assistant;
 
 defined('MOODLE_INTERNAL') || die();
 
+use local_ai_forum_assistant\license_client;
+
 /**
  * Observador de eventos para el Asistente de Foros IA.
  */
@@ -36,6 +38,12 @@ class event_observer {
         $record = $DB->get_record('local_ai_forum_assistant_coursecfg', ['courseid' => $event->courseid]);
         if (!$record || !$record->enabled) {
             debugging('[AI Forum Assistant] IA deshabilitada localmente para el curso ID: '.$event->courseid, DEBUG_DEVELOPER);
+            return true;
+        }
+
+        // ✅ Validación de licencia (MVP)
+        if (!license_client::is_allowed_now()) {
+            debugging('[AI Forum Assistant] License invalid or not active.', DEBUG_DEVELOPER);
             return true;
         }
 

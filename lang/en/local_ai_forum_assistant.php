@@ -34,3 +34,14 @@ $string['responsedelay_desc'] = 'Set the waiting time in seconds before the AI p
 $string['aimodel'] = 'OpenAI model';
 $string['aimodel_desc'] = 'Select the OpenAI model to be used for generating AI assistant responses.';
 
+$string['licserver'] = 'License server URL';
+$string['licserver_desc'] = 'Base URL of your WordPress license API. Example: https://your-domain.com (no trailing slash).';
+
+$string['licensekey'] = 'License key';
+$string['licensekey_desc'] = 'Paste the license key you received after purchase/activation.';
+
+$string['licsecret'] = 'API Secret (optional, MVP)';
+$string['licsecret_desc'] = 'WordPress API secret. For MVP only; in production prefer per-license tokens.';
+
+$string['task_validatelicense'] = 'Validate AI assistant license (daily)';
+

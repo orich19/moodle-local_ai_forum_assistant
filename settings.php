@@ -72,6 +72,33 @@ if ($hassiteconfig) {
         PARAM_INT
     ));
 
+    // ✅ License server settings
+    $settings->add(new admin_setting_configtext(
+        'local_ai_forum_assistant/licserver',
+        get_string('licserver', 'local_ai_forum_assistant'),
+        get_string('licserver_desc', 'local_ai_forum_assistant'),
+        '',
+        PARAM_RAW_TRIMMED
+    ));
+
+    $settings->add(new admin_setting_configtext(
+        'local_ai_forum_assistant/licensekey',
+        get_string('licensekey', 'local_ai_forum_assistant'),
+        get_string('licensekey_desc', 'local_ai_forum_assistant'),
+        '',
+        PARAM_RAW_TRIMMED
+    ));
+
+    // (Opcional en MVP) secret global del servidor WP.
+    // Se puede omitir si luego migramos a token por licencia.
+    $settings->add(new admin_setting_configtext(
+        'local_ai_forum_assistant/licsecret',
+        get_string('licsecret', 'local_ai_forum_assistant'),
+        get_string('licsecret_desc', 'local_ai_forum_assistant'),
+        '',
+        PARAM_RAW_TRIMMED
+    ));
+
     // Registrar la página en el panel de administración → Extensiones locales.
     $ADMIN->add('localplugins', $settings);
 }
