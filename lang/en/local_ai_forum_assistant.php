@@ -1,47 +1,34 @@
 <?php
-// General
 $string['pluginname'] = 'AI Forum Assistant';
 $string['settingsheading'] = 'General AI Assistant Settings';
-$string['settingsheading_desc'] = 'Configure the global AI assistant integration for automatic forum replies.';
+$string['settingsheading_desc'] = 'Configure AI assistant integration for automatic forum replies.';
 
-// API Key
 $string['apikey'] = 'OpenAI API Key';
-$string['apikey_desc'] = 'Enter your OpenAI API key to enable automatic reply generation.';
+$string['apikey_desc'] = 'Enter the OpenAI API key used to generate assistant replies.';
 
-// Global enable
 $string['enableplugin'] = 'Enable AI assistant globally';
-$string['enableplugin_desc'] = 'If enabled, the AI assistant will work in the courses listed below.';
+$string['enableplugin_desc'] = 'If enabled, the AI assistant operates in the courses listed below.';
 
-// Prompt
 $string['prompttemplate'] = 'Base prompt template';
-$string['prompttemplate_desc'] = 'This text is used as the base prompt for all AI replies. You can customize it to set the teaching tone.';
+$string['prompttemplate_desc'] = 'Used as the base instruction for all AI replies.';
 
-// Default teacher
 $string['defaultteacherid'] = 'Default teacher ID';
-$string['defaultteacherid_desc'] = 'If no teacher is found in the course, this user ID will be used to publish AI replies.';
+$string['defaultteacherid_desc'] = 'If no teacher is assigned in the course, this user ID will publish AI replies.';
 
-// Courses whitelist
 $string['enabledcourses'] = 'Enabled courses';
-$string['enabledcourses_desc'] = 'Enter the IDs of the courses where the AI assistant will be active, separated by commas. Example: 2,5,10';
-
-$string['courseconfigtitle'] = 'Course AI Configuration';
-$string['courseenable'] = 'Enable AI for forums in this course';
-$string['changessaved'] = 'Changes saved successfully.';
+$string['enabledcourses_desc'] = 'Enter course IDs separated by commas. Example: 2,5,10';
 
 $string['responsedelay'] = 'Response delay (seconds)';
-$string['responsedelay_desc'] = 'Set the waiting time in seconds before the AI posts its reply in the forum. Example: 30 = 30 seconds delay.';
+$string['responsedelay_desc'] = 'Seconds before the AI reply is posted in the forum.';
 
 $string['aimodel'] = 'OpenAI model';
-$string['aimodel_desc'] = 'Select the OpenAI model to be used for generating AI assistant responses.';
+$string['aimodel_desc'] = 'Select the OpenAI model for reply generation.';
 
+$string['licheading'] = 'License settings';
+$string['licheading_desc'] = 'Configure license server integration.';
 $string['licserver'] = 'License server URL';
-$string['licserver_desc'] = 'Base URL of your WordPress license API. Example: https://your-domain.com (no trailing slash).';
-
+$string['licserver_desc'] = 'Base URL of your WordPress license API. Example: https://your-domain.com';
 $string['licensekey'] = 'License key';
-$string['licensekey_desc'] = 'Paste the license key you received after purchase/activation.';
-
-$string['licsecret'] = 'API Secret (optional, MVP)';
-$string['licsecret_desc'] = 'WordPress API secret. For MVP only; in production prefer per-license tokens.';
-
-$string['task_validatelicense'] = 'Validate AI assistant license (daily)';
-
+$string['licensekey_desc'] = 'Paste the purchased license key here.';
+$string['licsecret'] = 'License secret';
+$string['licsecret_desc'] = 'Secret stored in WordPress wp_options: ailm_secret.';

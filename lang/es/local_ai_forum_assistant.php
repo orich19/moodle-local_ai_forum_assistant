@@ -1,49 +1,34 @@
 <?php
-// General
 $string['pluginname'] = 'Asistente IA para Foros';
 $string['settingsheading'] = 'Configuración general del asistente IA';
-$string['settingsheading_desc'] = 'Ajusta los parámetros globales de integración con IA para respuestas automáticas en foros.';
+$string['settingsheading_desc'] = 'Configura la integración del asistente IA para respuestas automáticas en foros.';
 
-// API Key
 $string['apikey'] = 'Clave API de OpenAI';
-$string['apikey_desc'] = 'Introduce tu clave API de OpenAI para habilitar la generación automática de respuestas.';
+$string['apikey_desc'] = 'Introduce la clave API de OpenAI para generar respuestas IA.';
 
-// Activación global
 $string['enableplugin'] = 'Activar asistente IA globalmente';
-$string['enableplugin_desc'] = 'Si se activa, el asistente IA podrá funcionar en los cursos habilitados de la lista inferior.';
+$string['enableplugin_desc'] = 'Si se activa, el asistente funcionará en los cursos listados abajo.';
 
-// Prompt
 $string['prompttemplate'] = 'Plantilla base de prompt';
-$string['prompttemplate_desc'] = 'Este texto se usará como contexto para todas las respuestas IA. Puedes personalizarlo para definir el tono docente.';
+$string['prompttemplate_desc'] = 'Texto usado como instrucción base para todas las respuestas IA.';
 
-// Docente por defecto
 $string['defaultteacherid'] = 'ID de docente por defecto';
-$string['defaultteacherid_desc'] = 'Si no se encuentra un docente asignado al curso, se usará este ID de usuario para publicar las respuestas IA.';
+$string['defaultteacherid_desc'] = 'Se usará si el curso no tiene un docente asignado.';
 
-// Cursos habilitados
 $string['enabledcourses'] = 'Cursos habilitados';
-$string['enabledcourses_desc'] = 'Introduce los IDs de los cursos donde el asistente IA estará activo, separados por comas. Ejemplo: 2,5,10';
-
-$string['courseconfigtitle'] = 'Configuración IA del curso';
-$string['courseenable'] = 'Habilitar IA para foros en este curso';
-$string['changessaved'] = 'Cambios guardados correctamente.';
+$string['enabledcourses_desc'] = 'Lista de IDs de cursos separados por comas.';
 
 $string['responsedelay'] = 'Retraso antes de la respuesta (segundos)';
-$string['responsedelay_desc'] = 'Define el tiempo de espera en segundos antes de que la IA publique su respuesta en el foro. Ejemplo: 30 = 30 segundos de retraso.';
+$string['responsedelay_desc'] = 'Tiempo de espera antes de publicar la respuesta IA.';
 
 $string['aimodel'] = 'Modelo de OpenAI';
-$string['aimodel_desc'] = 'Selecciona el modelo de OpenAI que se utilizará para generar las respuestas automáticas del asistente IA.';
+$string['aimodel_desc'] = 'Selecciona el modelo a utilizar para generar respuestas.';
 
+$string['licheading'] = 'Ajustes de licencia';
+$string['licheading_desc'] = 'Configura la integración con el servidor de licencias.';
 $string['licserver'] = 'URL del servidor de licencias';
-$string['licserver_desc'] = 'Base URL del servidor WordPress con la API de licencias. Ejemplo: https://tu-dominio.com (sin “/” final).';
-
+$string['licserver_desc'] = 'URL base de la API de licencias en WordPress.';
 $string['licensekey'] = 'Clave de licencia';
-$string['licensekey_desc'] = 'Pega aquí la clave de licencia que recibiste al comprar/activar.';
-
-$string['licsecret'] = 'API Secret (opcional, MVP)';
-$string['licsecret_desc'] = 'Secreto de la API del servidor WordPress. Para el MVP; en producción migra a tokens por licencia.';
-
-$string['task_validatelicense'] = 'Validar licencia del asistente IA (diariamente)';
-
-
-
+$string['licensekey_desc'] = 'Pega la clave de licencia obtenida.';
+$string['licsecret'] = 'Secreto de licencia';
+$string['licsecret_desc'] = 'Secreto almacenado en WordPress (wp_options → ailm_secret).';
